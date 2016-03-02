@@ -44,6 +44,24 @@ var game = (() => {
     var planeGeometry: PlaneGeometry;
     var planeMaterial: LambertMaterial;
     var plane: Mesh;
+    var cube1: Mesh;
+    var cube1Geometry: CubeGeometry;
+    var cube1Material: LambertMaterial;
+    var cube1: Mesh;
+    var cube1Geometry: CubeGeometry;
+    var cube1Material: LambertMaterial;
+    var cube2: Mesh;
+    var cube2Geometry: CubeGeometry;
+    var cube2Material: LambertMaterial;
+    var cube3: Mesh;
+    var cube3Geometry: CubeGeometry;
+    var cube3Material: LambertMaterial;
+    var cube4: Mesh;
+    var cube4Geometry: CubeGeometry;
+    var cube4Material: LambertMaterial;
+    var cube5: Mesh;
+    var cube5Geometry: CubeGeometry;
+    var cube5Material: LambertMaterial;
 
     function init() {
         // Instantiate a new Scene object
@@ -57,14 +75,53 @@ var game = (() => {
         /* ENTER CODE HERE */
         
         //add plane
-        planeGeometry = new PlaneGeometry(10, 10);
+        planeGeometry = new PlaneGeometry(7, 7);
         planeMaterial = new LambertMaterial({ color: 0xe75d14 });
         plane = new Mesh(planeGeometry, planeMaterial);
         plane.rotation.x = -0.5 * Math.PI;
         scene.add(plane);
         console.log("Added plane to scene");
  
- 
+        //add first cube
+        cube1Geometry = new CubeGeometry(5, 5, 5);
+        cube1Material = new LambertMaterial({ color: 0xc9c9c9 });
+        cube1 = new Mesh(cube1Geometry, cube1Material);
+        cube1.position.setY(5);
+        scene.add(cube1);
+        console.log("Added first cube to scene");
+        
+        //add second cube
+        cube2Geometry = new CubeGeometry(4, 4, 4);
+        cube2Material = new LambertMaterial({ color: 0xc9c9c9 });
+        cube2 = new Mesh(cube2Geometry, cube2Material);
+        cube2.position.setY(5);
+        scene.add(cube2);
+        console.log("Added second cube to scene");
+        
+        //add third cube
+        cube3Geometry = new CubeGeometry(3, 3, 3);
+        cube3Material = new LambertMaterial({ color: 0xc9c9c9 });
+        cube3 = new Mesh(cube3Geometry, cube3Material);
+        cube3.position.setY(5);
+        scene.add(cube3);
+        console.log("Added third cube to scene");
+        
+        //add fourth cube
+        cube4Geometry = new CubeGeometry(2, 2, 2);
+        cube4Material = new LambertMaterial({ color: 0xc9c9c9 });
+        cube4 = new Mesh(cube4Geometry, cube4Material);
+        cube4.position.setY(5);
+        scene.add(cube4);
+        console.log("Added fourth cube to scene");
+        
+        //add fifth cube
+        cube5Geometry = new CubeGeometry(1, 1, 1);
+        cube5Material = new LambertMaterial({ color: 0xc9c9c9 });
+        cube5 = new Mesh(cube5Geometry, cube5Material);
+        cube5.position.setY(5);
+        scene.add(cube5);
+        console.log("Added fifth cube to scene");
+        
         // add controls
         gui = new GUI();
         control = new Control();
