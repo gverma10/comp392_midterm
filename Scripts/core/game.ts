@@ -41,6 +41,7 @@ var game = (() => {
     var control: Control;
     var gui: GUI;
     var stats: Stats;
+    var pointLight: PointLight;
     var planeGeometry: PlaneGeometry;
     var planeMaterial: LambertMaterial;
     var plane: Mesh;
@@ -74,6 +75,12 @@ var game = (() => {
 
         /* ENTER CODE HERE */
         
+        // Point Light
+        pointLight = new PointLight(0xffffff);
+        pointLight.position.set(-4, 6, -4);
+        scene.add(pointLight);
+        console.log("Added pointLight to scene");
+        
         //add plane
         planeGeometry = new PlaneGeometry(7, 7);
         planeMaterial = new LambertMaterial({ color: 0xe75d14 });
@@ -86,7 +93,7 @@ var game = (() => {
         cube1Geometry = new CubeGeometry(5, 5, 5);
         cube1Material = new LambertMaterial({ color: 0xc9c9c9 });
         cube1 = new Mesh(cube1Geometry, cube1Material);
-        cube1.position.setY(5);
+        cube1.position.setY(0);
         scene.add(cube1);
         console.log("Added first cube to scene");
         
