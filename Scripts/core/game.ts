@@ -41,6 +41,9 @@ var game = (() => {
     var control: Control;
     var gui: GUI;
     var stats: Stats;
+    var planeGeometry: PlaneGeometry;
+    var planeMaterial: LambertMaterial;
+    var plane: Mesh;
 
     function init() {
         // Instantiate a new Scene object
@@ -53,6 +56,14 @@ var game = (() => {
 
         /* ENTER CODE HERE */
         
+        //add plane
+        planeGeometry = new PlaneGeometry(10, 10);
+        planeMaterial = new LambertMaterial({ color: 0xe75d14 });
+        plane = new Mesh(planeGeometry, planeMaterial);
+        plane.rotation.x = -0.5 * Math.PI;
+        scene.add(plane);
+        console.log("Added plane to scene");
+ 
  
         // add controls
         gui = new GUI();

@@ -4,6 +4,7 @@
   "description": "COMP392-MidTerm for Centennial College",
   "main": "game.js",
   "dependencies": {
+    "gulp-install": "^0.6.0",
     "typescript": "^1.7.5"
   },
   "devDependencies": {
@@ -11,6 +12,7 @@
     "gulp-connect": "^2.3.1",
     "gulp-debug": "^2.1.2",
     "gulp-inject": "^3.0.0",
+    "gulp-install": "^0.6.0",
     "gulp-open": "^1.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.10.0",
