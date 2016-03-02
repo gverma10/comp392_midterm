@@ -109,7 +109,7 @@ var game = (() => {
         cube3Geometry = new CubeGeometry(3, 3, 3);
         cube3Material = new LambertMaterial({ color: 0xc9c9c9 });
         cube3 = new Mesh(cube3Geometry, cube3Material);
-        cube3.position.setY(5);
+        cube3.position.setY(9);
         scene.add(cube3);
         console.log("Added third cube to scene");
         
@@ -117,7 +117,7 @@ var game = (() => {
         cube4Geometry = new CubeGeometry(2, 2, 2);
         cube4Material = new LambertMaterial({ color: 0xc9c9c9 });
         cube4 = new Mesh(cube4Geometry, cube4Material);
-        cube4.position.setY(5);
+        cube4.position.setY(12);
         scene.add(cube4);
         console.log("Added fourth cube to scene");
         
@@ -125,7 +125,7 @@ var game = (() => {
         cube5Geometry = new CubeGeometry(1, 1, 1);
         cube5Material = new LambertMaterial({ color: 0xc9c9c9 });
         cube5 = new Mesh(cube5Geometry, cube5Material);
-        cube5.position.setY(5);
+        cube5.position.setY(14);
         scene.add(cube5);
         console.log("Added fifth cube to scene");
         
@@ -145,6 +145,8 @@ var game = (() => {
 
     function addControl(controlObject: Control): void {
         /* ENTER CODE for the GUI CONTROL HERE */
+        gui.add(controlObject, 'rotationSpeed', -0.5, 0.5);
+        gui.add(controlObject, "toggle");
     }
 
     function addStatsObject() {
